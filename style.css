@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
 
 * {
   margin: 0;
@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  font-family: 'Press Start 2P', sans-serif;
+  font-family: "Press Start 2P", sans-serif;
   color: #eee;
   background-color: #222;
   /* background-color: #60b347; */
@@ -34,14 +34,15 @@ main {
 }
 
 .left {
-  width: 52rem;
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 50px;
 }
 
 .right {
-  width: 52rem;
+  width: 50%;
   font-size: 2rem;
 }
 
@@ -74,6 +75,7 @@ h1 {
   position: absolute;
   top: 2rem;
   right: 2rem;
+  text-align: center;
 }
 
 .again {
@@ -87,12 +89,6 @@ h1 {
   border: 4px solid #eee;
   font-family: inherit;
   color: inherit;
-  font-size: 5rem;
-  padding: 2.5rem;
-  width: 25rem;
-  text-align: center;
-  display: block;
-  margin-bottom: 3rem;
 }
 
 .btn {
@@ -101,12 +97,11 @@ h1 {
   color: #222;
   font-size: 2rem;
   font-family: inherit;
-  padding: 2rem 3rem;
   cursor: pointer;
 }
 
 .btn:hover {
-  background-color: #ccc;
+  background-color: rgb(219, 219, 219);
 }
 
 .message {
@@ -116,4 +111,320 @@ h1 {
 
 .label-score {
   margin-bottom: 2rem;
+}
+/* responsive */
+[class*="col-"] {
+  width: 100%;
+}
+@media screen and (max-width: 576px) {
+  .col-xs-3 {
+    width: 25%;
+    font-size: 1.3rem;
+    white-space: nowrap;
+    position: absolute;
+    bottom: 8%;
+    right: 50%;
+    padding: 10px;
+    text-align: center;
+  }
+  .col-xs-5.again {
+    width: 41.66%;
+    font-size: 1rem;
+    white-space: inherit;
+    padding: 20px;
+    margin: 10px;
+  }
+  .col-xs-5.guess-my-number {
+    width: 41.66%;
+    position:absolute;
+    left: 40%;
+    font-size: 1.3rem;
+    white-space: nowrap;
+    margin: 15px;
+
+  }
+  .col-xs-5.between {
+    width: 41.66%;
+    font-size: 1rem;
+    white-space: nowrap;
+    margin: 10px;
+    padding-top: 20px;
+  }
+  .col-xs-5 {
+    width: 41.66%;
+    text-align: center;
+  }
+  .col-xs-6 {
+    width: 50%;
+    font-size: 3.5rem;
+    padding: 10px 5px;
+    text-align: center;
+  }
+  .col-xs-12.guess {
+    width: 100%;
+    border-width: 4px 0;
+    position: absolute;
+    top: 45%;
+    right: 0px;
+    text-align: center;
+    padding: 55px 25px 25px 25px;
+  }
+  .col-xs-12.check {
+    width: 100%;
+    position: absolute;
+    font-size: 1.5rem;
+    top: 55%;
+    right: 0px;
+    text-align: center;
+    padding: 15px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .col-sm-1 {
+    width: 8.33%;
+  }
+  .col-sm-2 {
+    width: 16.66%;
+  }
+  .col-sm-3 {
+    width: 25%;
+    font-size: 2.5rem;
+    white-space: nowrap;
+    position: absolute;
+    bottom: 10%;
+    right: 50%;
+    text-align: center;
+  }
+  .col-sm-4 {
+    width: 33.33%;
+  }
+  .col-sm-5.between {
+    width: 41.66%;
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 15px 40px;
+    margin: 25px;
+  }
+  .col-sm-5.guess-my-number {
+    width: 41.66%;
+    font-size: 2.5rem;
+    padding: 45px 25px;
+    margin: 30px auto;
+    text-align: center;
+  }
+  .col-sm-5.again {
+    width: 41.66%;
+    font-size: 2.5rem;
+    padding: 25px 10px;
+    margin: 40px 25px;
+    text-align: center;
+  }
+  .col-sm-6 {
+    width: 50%;
+    font-size: 5.5rem;
+    padding: 45px;
+    text-align: center;
+  }
+  .col-sm-7 {
+    width: 58.33%;
+  }
+  .col-sm-8 {
+    width: 66.66%;
+  }
+  .col-sm-9 {
+    width: 75%;
+  }
+  .col-sm-10 {
+    width: 83.33%;
+  }
+  .col-sm-11 {
+    width: 91.66%;
+  }
+  .col-sm-12.guess {
+    width: 100%;
+    border-width: 10px 0;
+    position: absolute;
+    top: 44%;
+    right: 0px;
+    text-align: center;
+    padding: 55px 25px 42px 25px;
+  }
+  .col-sm-12.check {
+    width: 100%;
+    position: absolute;
+    font-size: 3rem;
+    top: 55%;
+    right: 0px;
+    text-align: center;
+    padding: 45px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .col-md-3 {
+    width: 25%;
+    font-size: 2.5rem;
+    white-space: nowrap;
+    position: absolute;
+    bottom: 12%;
+    right: 47%;
+    text-align: center;
+    padding: 2px;
+    line-height: 5px;
+  }
+  .col-md-5.between {
+    width: 41.66%;
+    font-size: 2rem;
+    text-align: center;
+    padding: 45px 40px;
+    margin: 20px;
+  }
+  .col-md-5.guess-my-number {
+    width: 41.66%;
+    font-size: 2.5rem;
+    padding: 45px 25px;
+    margin: 30px auto;
+    text-align: center;
+  }
+  .col-md-5.again {
+    width: 41.66%;
+    font-size: 2rem;
+    padding: 30px 25px;
+    margin: 40px 25px;
+    text-align: center;
+  }
+  .col-md-6 {
+    width: 50%;
+    font-size: 5.5rem;
+    padding: 45px;
+    text-align: center;
+  }
+  .col-md-12.guess {
+    width: 100%;
+    border-width: 10px 0;
+    position: absolute;
+    top: 48%;
+    right: 0px;
+    text-align: center;
+    padding: 70px;
+  }
+  .col-md-12.check {
+    width: 100%;
+    position: absolute;
+    font-size: 3rem;
+    top: 55%;
+    right: 0px;
+    text-align: center;
+    padding: 45px;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .col-lg-3 {
+    width: 25%;
+    font-size: 2.5rem;
+    white-space: nowrap;
+    margin: 25px;
+  }
+  .col-lg-5 {
+    width: 41.66%;
+    font-size: 2.5rem;
+  }
+  .col-lg-5.again {
+    padding: 25px;
+    margin: 15px;
+  }
+  .col-lg-5.between {
+    padding: 25px;
+    margin: 15px;
+    white-space: nowrap;
+  }
+  .col-lg-5.guess-my-number {
+    font-size: 3rem;
+  }
+  .col-lg-6 {
+    width: 50%;
+    padding: 45px 25px;
+  }
+  .col-lg-12.guess {
+    width: 100%;
+    padding: 60px;
+    margin-bottom: 30px;
+  }
+  .col-lg-12.check {
+    width: 100%;
+    padding: 45px;
+  }
+}
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  .col-xl-3 {
+    width: 25%;
+    font-size: 2.5rem;
+    white-space: nowrap;
+    margin: 25px;
+  }
+  .col-xl-5 {
+    width: 41.66%;
+    font-size: 2.5rem;
+  }
+  .col-xl-5.again {
+    padding: 25px 15px;
+    margin: 25px;
+  }
+  .col-xl-5.between {
+    padding: 25px;
+    white-space: nowrap;
+    margin: 25px;
+  }
+  .col-xl-5.guess-my-number {
+    font-size: 3rem;
+  }
+  .col-xl-6 {
+    width: 50%;
+    padding: 45px 25px;
+  }
+  .col-xl-12.guess {
+    width: 100%;
+    padding: 60px;
+    margin-bottom: 30px;
+  }
+  .col-xl-12.check {
+    width: 100%;
+    padding: 45px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .col-xxl-3 {
+    width: 25%;
+    font-size: 2.5rem;
+    white-space: nowrap;
+    margin: 25px;
+  }
+  .col-xxl-5 {
+    width: 41.66%;
+    font-size: 2.5rem;
+  }
+  .col-xxl-5.again {
+    padding: 30px 15px;
+    margin: 25px;
+  }
+  .col-xxl-5.between {
+    padding: 25px;
+    white-space: nowrap;
+    margin: 25px;
+  }
+  .col-xxl-5.guess-my-number {
+    font-size: 3rem;
+  }
+  .col-xxl-6 {
+    width: 50%;
+    padding: 45px 25px;
+  }
+  .col-xxl-12.guess {
+    width: 100%;
+    padding: 60px;
+    margin-bottom: 30px;
+  }
+  .col-xxl-12.check {
+    width: 100%;
+    padding: 45px;
+  }
 }
