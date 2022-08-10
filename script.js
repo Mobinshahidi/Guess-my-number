@@ -2,7 +2,7 @@
 //DEFINE A SECRET NUMBER
 let number = Math.trunc(Math.random() * 20 + 1);
 console.log(number);
-let score = 20;
+let score = 10;
 let highScore = 0;
 const displayMessage = function (message) {
   document.querySelector(".message").textContent = message;
@@ -28,11 +28,11 @@ document.querySelector(".check").addEventListener("click", function () {
   //when player enter a higher and lower number than secret number
   else if (guess !== number) {
     if (score > 0) {
-      displayMessage(guess > number ? "🔺 too high..." : "🔻 too low...");
+      displayMessage(guess > number ? "🔺 high..." : "🔻low...");
       score--;
       document.querySelector(".score").textContent = score;
     } else {
-      displayMessage("💢 Your lost the game...");
+      displayMessage("💢 You lost the game...");
       document.querySelector("body").style.backgroundColor = "#FF0400";
     }
   } else {
@@ -40,7 +40,7 @@ document.querySelector(".check").addEventListener("click", function () {
   }
   //document.querySelector(".highscore").textContent = score;
   document.querySelector(".again").addEventListener("click", function () {
-    score = 20;
+    score = 10;
     number = Math.trunc(Math.random() * 20 + 1);
     displayMessage("Start guessing...");
     document.querySelector(".score").textContent = score;
